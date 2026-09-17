@@ -1,0 +1,20 @@
+# Dependencies & local files
+node_modules
+.next
+.git
+.gitignore
+.agents
+.user_uploaded
+README.md
+
+# Log & env files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env*.local
+.env
+
+# Playwright & test reports
+test-results
+playwright-report
+tests

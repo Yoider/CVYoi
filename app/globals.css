@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-canvas: #f8fafc;
+  --color-navy: #0b2545;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-tech: #0b2545;
+  --color-ai: #6b21a8;
+  --color-emerald: #10b981;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #334155;
+  font-family: var(--font-geist-sans), Inter, system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Section Header Banners matching Corporate PDF */
+.section-banner {
+  background-color: #0b2545;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px -1px rgba(11, 37, 69, 0.1), 0 2px 4px -2px rgba(11, 37, 69, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Micro-interaction utility */
+.card-hover-fx {
+  transition: transform 200ms ease-out, border-color 200ms ease-out, shadow 200ms ease-out, background-color 200ms ease-out;
+}
+.card-hover-fx:hover {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(11, 37, 69, 0.08), 0 4px 6px -4px rgba(11, 37, 69, 0.04);
+}
