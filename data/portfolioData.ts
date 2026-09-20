@@ -83,19 +83,19 @@ export const portfolioData: PortfolioData = {
     ],
     stats: [
       {
-        label: 'Años de Experiencia',
+        label: 'Años en el entorno',
         value: '+5',
         detail: 'En desarrollo de software profesional'
       },
       {
         label: 'Stack Dominante',
         value: '.NET & Next.js',
-        detail: 'C#, TypeScript, React y PostgreSQL'
+        detail: 'C#, Python (Django), TypeScript (React/Vue), SQL Server y PostgreSQL'
       },
       {
         label: 'Especialización Actual',
         value: 'Multimodal AI',
-        detail: 'Gemini, WhatsApp API, MCP'
+        detail: 'Gemini, Meta API, MCP, n8n'
       },
       {
         label: 'Ubicación',
@@ -383,6 +383,7 @@ export const portfolioData: PortfolioData = {
         { name: '.NET Core / .NET 8', highlight: true, level: 'Experto' },
         { name: 'ASP.NET Web API', highlight: true, level: 'Experto' },
         { name: 'Clean Architecture', highlight: true, level: 'Experto' },
+        { name: 'Python & Django', highlight: true, level: 'Avanzado' },
         { name: 'RESTful APIs', highlight: true, level: 'Experto' },
         { name: 'Entity Framework Core', highlight: true, level: 'Experto' },
         { name: 'CQRS & MediatR', level: 'Dominio Profesional' },
@@ -401,10 +402,10 @@ export const portfolioData: PortfolioData = {
         { name: 'Next.js (App Router)', highlight: true, level: 'Experto' },
         { name: 'TypeScript', highlight: true, level: 'Experto' },
         { name: 'React 18 / 19', highlight: true, level: 'Experto' },
+        { name: 'Vue.js', highlight: true, level: 'Experto' },
         { name: 'Tailwind CSS', highlight: true, level: 'Experto' },
         { name: 'Server Actions', highlight: true, level: 'Avanzado' },
         { name: 'Server Components', highlight: true, level: 'Experto' },
-        { name: 'Vue.js', level: 'Dominio Profesional' },
         { name: 'Zustand & State Mgmt', level: 'Dominio Profesional' },
         { name: 'Mobile-First Design', level: 'Experto' }
       ]
@@ -436,7 +437,8 @@ export const portfolioData: PortfolioData = {
         { name: 'Visión Multimodal & OCR', highlight: true, level: 'Avanzado' },
         { name: 'Function Calling & JSON Schema', highlight: true, level: 'Experto' },
         { name: 'Model Context Protocol (MCP)', highlight: true, level: 'Avanzado' },
-        { name: 'WhatsApp Cloud API', highlight: true, level: 'Avanzado' },
+        { name: 'Meta API (WhatsApp Cloud)', highlight: true, level: 'Avanzado' },
+        { name: 'n8n (Workflow Automation)', highlight: true, level: 'Avanzado' },
         { name: 'Patrón Human-in-the-Loop', highlight: true, level: 'Avanzado' },
         { name: 'Colas & Desacoplamiento Asíncrono', level: 'Avanzado' }
       ]
