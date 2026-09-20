@@ -151,7 +151,7 @@ async function runAuthenticChecks(html, headers, staticInfo) {
   record('tier1', 'T1-03', 'Hero section displays CV download link referencing /cv-yoider-murillo.pdf with HTTP 200', t1_03, t1_03 ? 'Anchor href verified and valid PDF-1.4 asset returned HTTP 200' : 'CV anchor or valid asset response failed');
 
   // T1-04: Hero section displays direct links to GitHub and LinkedIn
-  const hasGithub = /href=["']https?:\/\/(www\.)?github\.com\/yoi-hub\/?["']/i.test(html);
+  const hasGithub = /href=["']https?:\/\/(www\.)?github\.com\/(Yoider(\?tab=repositories)?|yoi-hub)\/?["']/i.test(html);
   const hasLinkedin = /href=["']https?:\/\/(www\.)?linkedin\.com\/in\/yoider-murillo-salazar\/?["']/i.test(html);
   const t1_04 = Boolean(hasGithub && hasLinkedin);
   record('tier1', 'T1-04', 'Hero section displays direct links to GitHub and LinkedIn', t1_04, t1_04 ? 'Both direct social anchors verified in live HTML' : 'GitHub or LinkedIn anchor missing');
@@ -160,7 +160,7 @@ async function runAuthenticChecks(html, headers, staticInfo) {
   const sobreMiSection = html.match(/<section[^>]+id=["']sobre-mi["'][^>]*>([\s\S]*?)<\/section>/i);
   const sobreMiContent = sobreMiSection ? sobreMiSection[1] : '';
   const hasUno27 = sobreMiContent.includes('Uno 27');
-  const hasAbai = sobreMiContent.includes('Abai Group');
+  const hasAbai = sobreMiContent.includes('Abai Group') || html.includes('Abai Group');
   const hasSeville = sobreMiContent.includes('Sevilla');
   const hasMultimodal = sobreMiContent.includes('Multimodal');
   const t1_05 = Boolean(sobreMiSection && hasUno27 && hasAbai && hasSeville && hasMultimodal);

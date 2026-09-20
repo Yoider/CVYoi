@@ -32,10 +32,10 @@ export const About: React.FC = () => {
         {/* 3-Act Narrative Storytelling */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
           {about.paragraphs.map((paragraph, index) => {
-            const actTitles = [
-              'Acto I: Backend (.NET & Clean Architecture)',
-              'Acto II: Full-Stack (Next.js & TypeScript)',
-              'Acto III: IA Multimodal & Automatización en Sevilla',
+            const sectionTitles = [
+              'Backend .NET & Clean Architecture',
+              'Full-Stack Vue.js & Next.js',
+              'IA Multimodal & Automatización en Sevilla',
             ];
 
             return (
@@ -47,7 +47,7 @@ export const About: React.FC = () => {
                   <span
                     className="inline-block px-3 py-1 rounded-md text-xs font-mono font-bold bg-[#0b2545]/10 text-[#0b2545] border border-[#0b2545]/20 mb-4"
                   >
-                    {actTitles[index]}
+                    {sectionTitles[index]}
                   </span>
                   <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-sans">
                     {paragraph}

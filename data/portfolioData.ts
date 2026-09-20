@@ -18,9 +18,9 @@ export const portfolioData: PortfolioData = {
       {
         id: 'github',
         name: 'GitHub',
-        url: 'https://github.com/yoi-hub',
+        url: 'https://github.com/Yoider?tab=repositories',
         icon: 'Github',
-        displayValue: 'github.com/yoi-hub',
+        displayValue: 'github.com/Yoider',
         isPrimary: true
       },
       {
@@ -60,8 +60,8 @@ export const portfolioData: PortfolioData = {
     title: 'Sobre Mí',
     subtitle: 'De la ingeniería backend tradicional a la vanguardia de la IA multimodal',
     paragraphs: [
-      'Mi trayectoria como ingeniero de software comenzó en Colombia, enfocado en el desarrollo de arquitecturas backend robustas con C# y .NET Core en Uno 27 S.A.S. y Abai Group. Allí aprendí a diseñar pensando en la escalabilidad, la consistencia transaccional y la separación estricta de responsabilidades bajo Clean Architecture y DDD.',
-      'Con esa base estructural, di el salto hacia el desarrollo web moderno con TypeScript, React y Next.js. El tipado estricto y la evolución del App Router me permitieron crear experiencias digitales donde la velocidad de renderizado y la fiabilidad del servidor conviven sin fisuras.',
+      'Mi trayectoria como desarollador de software comenzó en Colombia, enfocado en el desarrollo de arquitecturas backend robustas con C# y .NET Core en Uno 27 S.A.S. Allí aprendí a diseñar pensando en la escalabilidad, la consistencia transaccional y la separación estricta de responsabilidades bajo Clean Architecture y DDD.',
+      'Tras los primeros 6 meses especializándome en backend (.NET, Clean Architecture y SQL Server) y en el despliegue directo en servidores físicos tangibles propios de la empresa, asumí un proyecto para liderar el desarrollo frontend utilizando Vue.js (90% de las aplicaciones). En este esquema, el frontend consumía nuestras APIs en .NET, delegando en el servidor toda la lógica de negocio. Posteriormente, trabajé durante 1 año como desarrollador Full Stack antes de especializarme en la arquitectura web moderna e IA Multimodal.',
       'Radicado en Sevilla, España, he combinado resiliencia y autoformación continua para especializarme en Inteligencia Artificial Multimodal. Hoy diseño sistemas que integran modelos de visión y lenguaje (Google Gemini 2.5 Flash), automatización de mensajería empresarial con WhatsApp Cloud API y protocolos como MCP para resolver fricciones operativas reales.'
     ],
     principles: [
@@ -146,7 +146,7 @@ export const portfolioData: PortfolioData = {
       ],
       links: {
         liveUrl: '#',
-        githubUrl: 'https://github.com/yoi-hub'
+        githubUrl: 'https://github.com/Yoider?tab=repositories'
       }
     },
     {
@@ -184,7 +184,7 @@ export const portfolioData: PortfolioData = {
         { name: 'Tailwind CSS', category: 'frontend' }
       ],
       links: {
-        githubUrl: 'https://github.com/yoi-hub'
+        githubUrl: 'https://github.com/Yoider?tab=repositories'
       }
     },
     {
@@ -225,7 +225,7 @@ export const portfolioData: PortfolioData = {
         { name: 'Recharts', category: 'frontend' }
       ],
       links: {
-        githubUrl: 'https://github.com/yoi-hub'
+        githubUrl: 'https://github.com/Yoider?tab=repositories'
       }
     },
     {
@@ -265,7 +265,7 @@ export const portfolioData: PortfolioData = {
         { name: 'Docker', category: 'tools' }
       ],
       links: {
-        githubUrl: 'https://github.com/yoi-hub'
+        githubUrl: 'https://github.com/Yoider?tab=repositories'
       }
     }
   ],
@@ -273,35 +273,34 @@ export const portfolioData: PortfolioData = {
   experience: [
     {
       id: 'exp-uno27',
-      role: 'Backend Software Engineer',
+      role: 'Full Stack & Backend Developer',
       company: 'Uno 27 S.A.S.',
       location: 'Cali / Bogotá, Colombia',
       period: '2019 – 2021',
       isCurrent: false,
       type: 'Jornada completa',
       description:
-        'Diseño y desarrollo de servicios backend empresariales y APIs RESTful de alto rendimiento en C# y .NET Core para clientes del sector servicios.',
+        'Inicios en desarrollo backend con C#, .NET Core, Clean Architecture y SQL Server en servidores físicos tangibles de la empresa. Tras 6 meses de especialización backend, transición hacia desarrollo Full Stack creando aplicaciones web con Vue.js conectadas a APIs .NET que procesaban toda la lógica de negocio.',
       responsibilities: [
-        'Diseño y desarrollo de APIs RESTful en C# y ASP.NET Core bajo Clean Architecture y principios SOLID.',
-        'Modelado y optimización de bases de datos relacionales en SQL Server y PostgreSQL mediante Entity Framework Core.',
-        'Implementación de esquemas de autenticación JWT y autorización granular por roles.',
-        'Estandarización de pruebas unitarias con xUnit y Moq, elevando la cobertura a más del 85% en servicios críticos.'
+        'Diseño y desarrollo de APIs RESTful en C# y ASP.NET Core bajo Clean Architecture y bases de datos relacionales en SQL Server.',
+        'Despliegue directo y administración de aplicaciones en servidores físicos tangibles propiedad de la empresa.',
+        'Desarrollo de interfaces frontend dinámicas utilizando Vue.js (90% de los proyectos) y sus librerías oficiales para el consumo de datos backend.',
+        'Desempeño durante 1 año como Full Stack Developer integrando vistas reactivas con servidores backend de alta consistencia transaccional.'
       ],
       achievements: [
-        'Reducción del 40% en tiempos de respuesta de endpoints transaccionales mediante optimización de consultas SQL e indexación.',
-        'Disminución del 30% en incidencias en producción gracias a la adopción de Clean Architecture y testing riguroso.'
+        'Reducción del 40% en tiempos de respuesta de endpoints transaccionales mediante optimización de consultas SQL e indexación en SQL Server.',
+        'Despliegue continuo y exitoso de proyectos integrales (Vue.js + .NET) en infraestructura de servidores físicos locales.'
       ],
       technologies: [
         'C#',
         '.NET Core',
+        'Vue.js',
         'ASP.NET Web API',
         'Clean Architecture',
         'SQL Server',
-        'PostgreSQL',
-        'Entity Framework Core',
+        'Servidores Físicos (On-Premise)',
         'xUnit',
-        'Git',
-        'Docker'
+        'Git'
       ]
     },
     {
@@ -467,7 +466,7 @@ export const portfolioData: PortfolioData = {
     whatsappUrl: 'https://wa.me/34604305221?text=Hola%20Yoider,%20he%20visto%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar.',
     location: 'Sevilla, Andalucía, España',
     availability: 'Disponible inmediatamente para incorporación en Sevilla o Remoto',
-    githubUrl: 'https://github.com/yoi-hub',
+    githubUrl: 'https://github.com/Yoider?tab=repositories',
     linkedinUrl: 'https://www.linkedin.com/in/yoider-murillo-salazar/'
   }
 };
