@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
           {/* Social Links & Back to top */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/yoi-hub"
+              href={portfolioData.contact.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub de Yoider Murillo"

@@ -80,14 +80,14 @@ export const Hero: React.FC = () => {
           {/* Social Links & Highlights */}
           <div className="flex flex-wrap items-center justify-center gap-6 pt-6 border-t border-slate-200 w-full max-w-xl text-slate-600">
             <a
-              href="https://github.com/yoi-hub"
+              href={hero.socialLinks.find(l => l.id === 'github')?.url || 'https://github.com/Yoider?tab=repositories'}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Perfil de GitHub de Yoider Murillo"
               className="inline-flex items-center gap-2 text-sm hover:text-slate-900 transition-colors duration-200 min-h-[44px] px-2"
             >
               <Github className="w-5 h-5 text-slate-600" aria-hidden="true" />
-              <span className="font-mono text-xs">github.com/yoi-hub</span>
+              <span className="font-mono text-xs">{hero.socialLinks.find(l => l.id === 'github')?.displayValue || 'github.com/Yoider'}</span>
             </a>
 
             <a
