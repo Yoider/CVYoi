@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { TechnicalProject } from '@/types/portfolio';
-import { X, ExternalLink, Github, CheckCircle2, Cpu, BarChart3, AlertCircle } from 'lucide-react';
+import { X, ExternalLink, Github, CheckCircle2, Cpu, BarChart3, AlertCircle, Users } from 'lucide-react';
 
 interface ProjectModalProps {
   project: TechnicalProject | null;
@@ -168,7 +168,33 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <p className="text-slate-600 text-sm sm:text-base font-sans leading-relaxed">
             {project.tagline}
           </p>
+
+          {project.clientType && (
+            <div className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-600 font-sans mt-3">
+              <Users className="w-4 h-4 text-slate-400 shrink-0" aria-hidden="true" />
+              <span className="font-semibold text-slate-800">Tipo de cliente:</span>
+              <span>{project.clientType}</span>
+            </div>
+          )}
         </div>
+
+        {/* Solved Functions Section */}
+        {project.solvedFunctions && project.solvedFunctions.length > 0 && (
+          <div className="mb-8 p-4 sm:p-5 rounded-xl bg-blue-50/60 border border-blue-200">
+            <div className="flex items-center gap-2 text-[#0b2545] font-sans font-bold text-sm sm:text-base mb-2.5">
+              <CheckCircle2 className="w-4 h-4 shrink-0 text-[#0b2545]" aria-hidden="true" />
+              <h3 className="font-bold">Funciones que se basa en resolver</h3>
+            </div>
+            <ul className="space-y-2">
+              {project.solvedFunctions.map((fn, index) => (
+                <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-800">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#0b2545] mt-2 shrink-0" />
+                  <span>{fn}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Problem Section */}
         <div className="mb-8 p-4 sm:p-5 rounded-xl bg-amber-50/80 border border-amber-200">

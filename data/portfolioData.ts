@@ -107,53 +107,71 @@ export const portfolioData: PortfolioData = {
 
   projects: [
     {
-      id: 'impulsar',
-      title: 'Impulsar',
-      category: 'GovTech / LegalTech / AI SaaS',
-      tagline: 'Automatización inteligente de expedientes y trámites con IA multimodal y mensajería omnicanal.',
+      id: 'quimera',
+      title: 'Quimera',
+      category: 'Gastronomic Platform / Next.js 16 & SaaS',
+      tagline: 'Carta interactiva digital, filtrado de alérgenos en tiempo real y portal de gestión /staff contenedorizado.',
+      clientType: 'Hostelería & Restauración (Taberna Quimera, Sevilla)',
+      solvedFunctions: [
+        'Carta digital interactiva con navegación fluida y categorizada en tiempo real',
+        'Filtrado dinámico multifacético de los 14 alérgenos de la normativa europea (<50ms)',
+        'Portal /staff para actualización instantánea de stock de platos ("Disponible / Agotado")',
+        'Contenedorización multi-stage en Docker lista para despliegue en servidor VPS'
+      ],
       accentColor: 'purple',
       highlighted: true,
       summary:
-        'Plataforma SaaS diseñada para procesar y validar expedientes documentales complejos (PDFs, escrituras, identificaciones) mediante Google Gemini 2.5 Flash y WhatsApp Cloud API, con desacoplamiento asíncrono y panel Human-in-the-loop.',
+        'Aplicación web full-stack para "Taberna Quimera" (Sevilla). Combina una carta interactiva ultrarrápida con filtrado de alérgenos en tiempo real, arquitectura modular con área privada para trabajadores (/staff) para control de disponibilidad de comandas y despliegue en producción con Docker.',
       problem:
-        'La revisión manual de documentación jurídica y administrativa genera cuellos de botella de días, transcripciones erróneas y saturación de canales de soporte en organismos y gestorías.',
+        'Los establecimientos de hostelería sufren rigidez en la actualización de cartas físicas, falta de filtrado dinámico de alérgenos y cuellos de botella en la gestión en tiempo real del stock de platos y comandas.',
       solutionArchitecture: {
         overview:
-          'Arquitectura desacoplada en Next.js App Router que recibe documentos vía webhooks de WhatsApp Cloud API, procesa inferencias multimodales en segundo plano con Redis y presenta auditoría con flags de confianza.',
+          'Arquitectura Next.js 16 App Router con Server Components para renderizado ultrarrápido, React 19, Server Actions para mutaciones de disponibilidad y Prisma ORM con capa de abstracción para fallback a datos Mock y persistencia relacional.',
         keyPoints: [
-          'Ingesta omnicanal con Webhooks asíncronos en Meta WhatsApp Cloud API',
-          'Extracción estructurada con Google Gemini 2.5 Flash y JSON Schema mediante Function Calling',
-          'Colas de inferencia asíncronas con Redis para respuesta inmediata (<200ms) al webhook',
-          'Patrón Human-in-the-Loop: panel administrativo para casos de confianza <95%',
-          'Persistencia relacional y auditoría inmutable con PostgreSQL y Prisma ORM'
+          'Frontend interactivo "Modern Tavern" estilizado con Tailwind CSS v4 y tipografía Serif/Sans',
+          'Filtrado dinámico multifacético de 14 alérgenos alimentarios y buscador sub-50ms',
+          'Portal privado /staff para actualización en tiempo real de disponibilidad ("Disponible / Agotado")',
+          'Esquema relacional en Prisma ORM con datos mock iniciales listos para producción',
+          'Contenedorización multi-stage en Docker (output: standalone) con docker-compose.yml'
         ]
       },
       metrics: [
-        { value: '-75%', label: 'Tiempo de Resolución', detail: 'De 48 horas a menos de 12 minutos por expediente' },
-        { value: '94.2%', label: 'Precisión de Extracción', detail: 'En documentos no tabulares y escaneos de baja resolución' },
-        { value: '+80%', label: 'Atención Automatizada', detail: 'Sin intervención humana en primera fase de recepción' }
+        { value: '< 100ms', label: 'Tiempo de Filtrado', detail: 'En catálogo de platos y matriz de alérgenos' },
+        { value: '100%', label: 'Cobertura de Alérgenos', detail: 'Filtros dinámicos de los 14 alérgenos oficiales EU' },
+        { value: '-50%', label: 'Tiempo de Gestión', detail: 'En actualización de disponibilidad de platos en sala' }
       ],
       techStack: [
-        { name: 'Next.js App Router', category: 'frontend' },
+        { name: 'Next.js 16 (App Router)', category: 'frontend' },
+        { name: 'React 19', category: 'frontend' },
         { name: 'TypeScript', category: 'frontend' },
-        { name: 'Google Gemini 2.5 Flash', category: 'ai' },
-        { name: 'WhatsApp Cloud API', category: 'ai' },
-        { name: 'PostgreSQL', category: 'data' },
+        { name: 'Tailwind CSS v4', category: 'frontend' },
         { name: 'Prisma ORM', category: 'data' },
-        { name: 'Redis', category: 'data' },
-        { name: 'Tailwind CSS', category: 'frontend' },
-        { name: 'Docker', category: 'tools' }
+        { name: 'Server Actions', category: 'backend' },
+        { name: 'Lucide React', category: 'frontend' },
+        { name: 'Docker & Compose', category: 'tools' }
       ],
+      githubMetadata: {
+        repoName: 'Yoider/Quimera',
+        repoUrl: 'https://github.com/Yoider/Quimera',
+        language: 'TypeScript'
+      },
       links: {
-        liveUrl: '#',
-        githubUrl: 'https://github.com/Yoider?tab=repositories'
+        liveUrl: 'https://quimera.n0v4.es',
+        githubUrl: 'https://github.com/Yoider/Quimera'
       }
     },
     {
       id: 'chron0v4',
-      title: 'CHRON0V4',
+      title: 'Chron0v4',
       category: 'Developer Productivity / Context Architecture',
-      tagline: 'Motor de productividad técnica y preservación de contexto basado en la metodología Diátaxis.',
+      tagline: 'Motor de productividad técnica y preservación de memoria contextual basado en Diátaxis y MCP.',
+      clientType: 'Desarrolladores de Software, Equipos de Ingeniería & Agentes IA',
+      solvedFunctions: [
+        'Estructuración del conocimiento técnico en los cuatro cuadrantes de Diátaxis',
+        'Reducción del 60% en consumo de tokens en sesiones de prompts continuos con LLMs',
+        'Servidor ligero Model Context Protocol (MCP) para alimentar agentes en tiempo real',
+        'Trazabilidad total de Decisiones Arquitectónicas (ADRs) conectadas a commits'
+      ],
       accentColor: 'blue',
       highlighted: true,
       summary:
@@ -183,89 +201,116 @@ export const portfolioData: PortfolioData = {
         { name: 'Diátaxis Framework', category: 'tools' },
         { name: 'Tailwind CSS', category: 'frontend' }
       ],
+      githubMetadata: {
+        repoName: 'Yoider/Chron0v4',
+        repoUrl: 'https://github.com/Yoider/Chron0v4',
+        language: 'TypeScript'
+      },
       links: {
-        githubUrl: 'https://github.com/Yoider?tab=repositories'
+        githubUrl: 'https://github.com/Yoider/Chron0v4'
       }
     },
     {
-      id: 'finanzas-dashboard',
-      title: 'Finanzas Dashboard',
-      category: 'Fintech / SaaS Analytics',
-      tagline: 'Panel financiero reactivo con cálculo en tiempo real de balances y Server Actions.',
+      id: 'wellness-club',
+      title: 'The Wellness Club',
+      category: 'Booking & Event Management / Luxury Lifestyle',
+      tagline: 'Plataforma de reserva y gestión nominal de plazas bajo experiencia visual "Quiet Luxury".',
+      clientType: 'Sector Wellness / Salud & Eventos de Bienestar (Malabo, Guinea Ecuatorial)',
+      solvedFunctions: [
+        'Reserva nominal y asignación de plazas exclusivas con cupos actualizados en tiempo real',
+        'Validación instantánea de formulario y prevención de sobrecupos',
+        'Diseño visual "Quiet Luxury" responsive con paleta cromática personalizada',
+        'Persistencia relacional y confirmación automatizada para asistentes'
+      ],
       accentColor: 'emerald',
       highlighted: true,
       summary:
-        'Dashboard patrimonial multi-cuenta que ofrece conciliación en tiempo real de saldos multidivisa (EUR, USD, COP), proyecciones de flujo de caja y mutaciones seguras mediante Server Actions.',
+        'Aplicación web oficial para la reserva y gestión nominal de plazas para las sesiones de lanzamiento de The Wellness Club en Malabo (Guinea Ecuatorial), con interfaz refinada y experiencia de usuario fluida.',
       problem:
-        'Falta de visibilidad financiera consolidada al operar con múltiples cuentas bancarias e inversiones, con dashboards bancarios lentos e interfaces complejas.',
+        'La gestión manual de reservas para eventos premium provoca listas de espera desordenadas, falta de control en el aforo nominal y experiencias de registro poco alineadas con marcas de alta gama.',
       solutionArchitecture: {
         overview:
-          'Aplicación Next.js App Router con Server Components para renderizado instantáneo y Server Actions para mutaciones transaccionales sin recarga, respaldadas por validación estricta con Zod.',
+          'Aplicación Next.js App Router con Server Actions para mutaciones transaccionales inmediatas de reserva, persistencia relacional con PostgreSQL/Prisma y componentes reactivos optimizados.',
         keyPoints: [
-          'Mutaciones atómicas en servidor con Server Actions y revalidación granular de caché',
-          'Cálculo reactivo de balances con precisión decimal estricta y soporte multicuentas',
-          'Validación tipada en cliente y servidor mediante esquemas Zod',
-          'Visualizaciones optimizadas con gráficos vectoriales en modo oscuro nativo'
+          'Bloqueo transaccional de plaza para evitar reservas concurrentes por encima del aforo',
+          'Diseño "Quiet Luxury" con paleta Warm Cream, Pale Sage y tipografía serif elegante',
+          'Validación estricta de datos nominales de cada asistente mediante esquemas tipados',
+          'Panel de supervisión rápida de plazas restantes por sesión'
         ]
       },
       metrics: [
-        { value: '< 150ms', label: 'Carga de Dashboard', detail: 'Renderizado ultrarrápido con React Server Components' },
-        { value: '0 Error', label: 'Precisión Decimal', detail: 'Garantizada en conciliación multidivisa y multicuentas' },
-        { value: '100%', label: 'Seguridad Tipada', detail: 'En todas las mutaciones transaccionales' }
+        { value: '< 200ms', label: 'Respuesta de Reserva', detail: 'Validación y bloqueo atómico de plaza' },
+        { value: '100%', label: 'Control de Aforo', detail: 'Prevención estricta de plazas duplicadas' },
+        { value: '99+', label: 'Puntuación UI/UX', detail: 'Adaptabilidad móvil y diseño minimalista' }
       ],
       techStack: [
         { name: 'Next.js App Router', category: 'frontend' },
-        { name: 'React Server Components', category: 'frontend' },
         { name: 'TypeScript', category: 'frontend' },
-        { name: 'Server Actions', category: 'backend' },
+        { name: 'React', category: 'frontend' },
         { name: 'Tailwind CSS', category: 'frontend' },
         { name: 'PostgreSQL', category: 'data' },
         { name: 'Prisma ORM', category: 'data' },
-        { name: 'Zod', category: 'tools' },
-        { name: 'Recharts', category: 'frontend' }
+        { name: 'Server Actions', category: 'backend' }
       ],
+      githubMetadata: {
+        repoName: 'Yoider/WellnessClub',
+        repoUrl: 'https://github.com/Yoider/WellnessClub',
+        language: 'TypeScript'
+      },
       links: {
-        githubUrl: 'https://github.com/Yoider?tab=repositories'
+        githubUrl: 'https://github.com/Yoider/WellnessClub'
       }
     },
     {
-      id: 'tuma-z',
-      title: 'Tuma_Z',
-      category: 'E-Commerce / B2C Web Platform',
-      tagline: 'Comercio electrónico B2C con catálogo dinámico, filtrado instantáneo y backend desacoplado.',
+      id: 'cvyoi',
+      title: 'CVYoi',
+      category: 'Portfolio Engineering / Interactive Full Stack',
+      tagline: 'Portafolio profesional interactivo con diseño corporativo minimalista y arquitectura Dockerizada.',
+      clientType: 'Reclutadores Técnicos, CTOs & Empresas de Ingeniería de Software',
+      solvedFunctions: [
+        'Presentación interactiva de experiencia, proyectos y stack técnico por capas',
+        'Descarga sincronizada de CV oficial en PDF con enlace dinámico verificado',
+        'Contenedorización multi-stage en Docker (standalone) con proxy inverso Nginx y SSL',
+        'Suite completa de pruebas E2E automatizadas (23 checks en 4 niveles)'
+      ],
       accentColor: 'blue',
       highlighted: true,
       summary:
-        'Tienda online moderna con catálogo modular optimizado para SEO, filtrado multifacético sub-50ms y gestión de inventario y pedidos con arquitectura limpia.',
+        'Plataforma web del CV profesional de Yoider Murillo Salazar. Construida con arquitectura moderna Next.js standalone, diseño fiel al currículum corporativo (#0b2545 / #f8fafc), Docker Compose y verificación continua.',
       problem:
-        'Plataformas minoristas lentas y rígidas que perjudican la tasa de conversión en dispositivos móviles y encarecen los costes operativos.',
+        'Los currículums estáticos en PDF carecen de interactividad para explorar arquitecturas de proyectos, demos funcionales en producción o verificar métricas técnicas reales.',
       solutionArchitecture: {
         overview:
-          'Frontend Next.js con renderizado híbrido (ISR/SSR) para máxima velocidad de catálogo, combinado con un backend modular estructurado por capas para pedidos e inventario.',
+          'Next.js 14 con App Router y modo standalone empaquetado en imagen Docker multi-stage mínima sobre Alpine Linux, servida tras Nginx con certificado SSL automatizado.',
         keyPoints: [
-          'Generación estática incremental (ISR) para páginas de productos con latencia mínima',
-          'Filtrado facetado dinámico del lado del cliente con tiempos de respuesta sub-50ms',
-          'Carrito de compras reactivo con persistencia local y sincronización de stock',
-          'Arquitectura backend modular con Clean Architecture y principios SOLID'
+          'Generación estática completa de páginas para carga instantánea (<100ms)',
+          'Diseño corporativo basado en el sistema de diseño PDF con Tailwind CSS',
+          'Verificación E2E continua ejecutada en tests locales antes de cada despliegue',
+          'Infraestructura autónoma con docker-compose.yml y reinicio automático'
         ]
       },
       metrics: [
-        { value: '98+', label: 'Lighthouse Score', detail: 'En Performance, SEO, Accesibilidad y Mejores Prácticas' },
-        { value: '1.1s', label: 'Time-to-Interactive', detail: 'En conexiones móviles 4G sin degradación' },
-        { value: '+35%', label: 'Tasa de Conversión', detail: 'Frente a la arquitectura monolítica tradicional' }
+        { value: '23/23', label: 'Tests E2E Verificados', detail: '100% de cobertura en 4 niveles de pruebas' },
+        { value: '< 100ms', label: 'Latencia de Carga', detail: 'Renderizado estático optimizado con Docker' },
+        { value: '100%', label: 'HTTPS & SSL', detail: 'Despliegue en VPS con Let’s Encrypt' }
       ],
       techStack: [
-        { name: 'Next.js', category: 'frontend' },
-        { name: 'React', category: 'frontend' },
+        { name: 'Next.js 14 (Standalone)', category: 'frontend' },
         { name: 'TypeScript', category: 'frontend' },
+        { name: 'React 18 / 19', category: 'frontend' },
         { name: 'Tailwind CSS', category: 'frontend' },
-        { name: 'Zustand', category: 'frontend' },
-        { name: '.NET Core API', category: 'backend' },
-        { name: 'PostgreSQL', category: 'data' },
-        { name: 'Docker', category: 'tools' }
+        { name: 'Docker', category: 'tools' },
+        { name: 'Nginx', category: 'tools' },
+        { name: 'Node.js', category: 'backend' }
       ],
+      githubMetadata: {
+        repoName: 'Yoider/CVYoi',
+        repoUrl: 'https://github.com/Yoider/CVYoi',
+        language: 'TypeScript'
+      },
       links: {
-        githubUrl: 'https://github.com/Yoider?tab=repositories'
+        liveUrl: 'https://cvyoi.n0v4.es',
+        githubUrl: 'https://github.com/Yoider/CVYoi'
       }
     }
   ],

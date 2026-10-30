@@ -70,12 +70,19 @@ export interface TechnicalProject {
   title: string;
   category: string;
   tagline: string;
+  clientType: string;
+  solvedFunctions: string[];
   accentColor: AccentColor;
   summary: string;
   problem: string;
   solutionArchitecture: ProjectArchitecture;
   metrics: ProjectMetric[];
   techStack: ProjectTechItem[];
+  githubMetadata?: {
+    repoName: string;
+    repoUrl: string;
+    language?: string;
+  };
   links: {
     liveUrl?: string;
     githubUrl?: string;

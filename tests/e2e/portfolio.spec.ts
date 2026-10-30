@@ -69,7 +69,7 @@ test.describe('Web CV Yoider Murillo Salazar — Comprehensive E2E Test Suite', 
       await page.goto('/');
 
       // Check GitHub link
-      const githubLink = page.locator('a[href*="github.com/yoi-hub"]').first();
+      const githubLink = page.locator('a[href*="github.com/Yoider"], a[href*="github.com/yoi-hub"]').first();
       await expect(githubLink).toBeVisible();
 
       // Check LinkedIn link
@@ -99,15 +99,15 @@ test.describe('Web CV Yoider Murillo Salazar — Comprehensive E2E Test Suite', 
       await expect(projectsSection).toBeVisible();
 
       // Check all 4 projects by title
-      const impulsarCard = projectsSection.locator('text=Impulsar').first();
-      const chronovaCard = projectsSection.locator('text=CHRON0V4').first();
-      const finanzasCard = projectsSection.locator('text=Finanzas Dashboard').first();
-      const tumazCard = projectsSection.locator('text=Tuma_Z').first();
+      const quimeraCard = projectsSection.locator('text=Quimera').first();
+      const chronovaCard = projectsSection.locator('text=Chron0v4').first();
+      const wellnessCard = projectsSection.locator('text=The Wellness Club').first();
+      const cvyoiCard = projectsSection.locator('text=CVYoi').first();
 
-      await expect(impulsarCard).toBeVisible();
+      await expect(quimeraCard).toBeVisible();
       await expect(chronovaCard).toBeVisible();
-      await expect(finanzasCard).toBeVisible();
-      await expect(tumazCard).toBeVisible();
+      await expect(wellnessCard).toBeVisible();
+      await expect(cvyoiCard).toBeVisible();
     });
 
     test('T1-07: Experience timeline renders chronological trajectory (Uno 27, Abai Group, Sevilla)', async ({ page }) => {

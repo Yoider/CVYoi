@@ -169,14 +169,14 @@ async function runAuthenticChecks(html, headers, staticInfo) {
   // T1-06: Projects section renders exactly 4 technical project cards
   const proyectosSection = html.match(/<section[^>]+id=["']proyectos["'][^>]*>([\s\S]*?)<\/section>/i);
   const proyectosContent = proyectosSection ? proyectosSection[1] : '';
-  const hasImpulsar = proyectosContent.includes('Impulsar');
-  const hasChronova = proyectosContent.includes('CHRON0V4');
-  const hasFinanzas = proyectosContent.includes('Finanzas Dashboard');
-  const hasTumaz = proyectosContent.includes('Tuma_Z');
+  const hasQuimera = proyectosContent.includes('Quimera');
+  const hasChronova = /Chron0v4/i.test(proyectosContent);
+  const hasWellness = /Wellness/i.test(proyectosContent);
+  const hasCvyoi = /CVYoi/i.test(proyectosContent);
   const cardCount = (proyectosContent.match(/id=["']modal-project-title["']|<article|data-testid=["']project-card["']/gi) || []).length ||
-                    [hasImpulsar, hasChronova, hasFinanzas, hasTumaz].filter(Boolean).length;
-  const t1_06 = Boolean(proyectosSection && hasImpulsar && hasChronova && hasFinanzas && hasTumaz && cardCount >= 4);
-  record('tier1', 'T1-06', 'Projects section renders exactly 4 technical project cards', t1_06, t1_06 ? 'Impulsar, CHRON0V4, Finanzas Dashboard, Tuma_Z all present' : 'One or more project cards missing');
+                    [hasQuimera, hasChronova, hasWellness, hasCvyoi].filter(Boolean).length;
+  const t1_06 = Boolean(proyectosSection && hasQuimera && hasChronova && hasWellness && hasCvyoi && cardCount >= 4);
+  record('tier1', 'T1-06', 'Projects section renders exactly 4 technical project cards', t1_06, t1_06 ? 'Quimera, Chron0v4, Wellness Club, CVYoi all present' : 'One or more project cards missing');
 
   // T1-07: Experience timeline renders chronological trajectory (Uno 27, Abai Group, Sevilla)
   const expSection = html.match(/<section[^>]+id=["']experiencia["'][^>]*>([\s\S]*?)<\/section>/i);
